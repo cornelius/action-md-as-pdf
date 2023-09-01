@@ -1,11 +1,12 @@
 name: 'Markdown as PDF'
 description: 'Render Markdown formatted files to PDFs'
 inputs:
-  markdown-file:
+  markdown_file:
     description: 'Name of input file in Markdown format'
     required: true
-  pdf-file:
+  pdf_file:
     description: 'Name of output file in PDF format'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
