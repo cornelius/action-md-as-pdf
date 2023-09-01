@@ -4,12 +4,8 @@ inputs:
   markdown-file:
     description: 'Name of input file in Markdown format'
     required: true
-outputs:
   pdf-file:
     description: 'Name of output file in PDF format'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.markdown-file }}
-    - -o ${{ inputs.pdf-file }}
