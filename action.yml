@@ -1,9 +1,12 @@
 name: 'Markdown as PDF'
 description: 'Render Markdown formatted files to PDFs'
 inputs:
-  markdown_file:
-    description: 'Name of input file in Markdown format'
+  markdown_dir:
+    description: 'Name of directory containing markdown files'
+    default: ''
     required: true
+  markdown_file:
+    description: 'Name of input file in Markdown format. If omitted all files in markdown_dir will be processed-'
   pdf_file:
     description: 'Name of output file in PDF format'
     required: true

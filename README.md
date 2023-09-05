@@ -16,8 +16,16 @@ Enter shell of container for debugging:
     docker run --entrypoint /bin/bash -it action-md-as-pdf
 
 
-Run action locally:
+Run action locally in file mode:
 
+    export INPUT_MARKDOWN_DIR=.
     export INPUT_MARKDOWN_FILE=README.md
     export INPUT_PDF_FILE=output.pdf
-    docker run --rm -e "INPUT_MARKDOWN_FILE" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
+    docker run --rm -e "INPUT_MARKDOWN_DIR" -e "INPUT_MARKDOWN_FILE" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
+
+Run action locally in dir mode:
+
+    export INPUT_MARKDOWN_DIR=test_data
+    export INPUT_MARKDOWN_FILE=""
+    export INPUT_PDF_FILE=output.pdf
+    docker run --rm -e "INPUT_MARKDOWN_DIR" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
