@@ -14,3 +14,10 @@ Build container locally (add option `--no-cache` to force rebuild):
 Enter shell of container for debugging:
 
     docker run --entrypoint /bin/bash -it action-md-as-pdf
+
+
+Run action locally:
+
+    export INPUT_MARKDOWN_FILE=README.md
+    export INPUT_PDF_FILE=output.pdf
+    docker run --rm -e "INPUT_MARKDOWN_FILE" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
