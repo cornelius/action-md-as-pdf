@@ -20,7 +20,7 @@ Name of output file in PDF format.
 
 The following example runs when changes to files in the `src` directory are pushed. It takes all Markdown files from the directory and turns them into one PDF `output.pdf`. The resulting PDF is uploaded as artifact of the CI job.
 
-````
+```
 on:
   push:
     paths:
