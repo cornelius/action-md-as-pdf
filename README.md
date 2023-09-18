@@ -78,3 +78,7 @@ Run action locally in dir mode:
     export INPUT_MARKDOWN_FILE=""
     export INPUT_PDF_FILE=output.pdf
     docker run --rm -e "INPUT_MARKDOWN_DIR" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
+
+## License
+
+This repository is licensed under the MIT license. See the [LICENSE](LICENSE) file for details.
