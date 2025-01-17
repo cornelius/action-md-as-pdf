@@ -14,4 +14,4 @@ fi
 
 echo "INPUTS:" $INPUTS
 
-pandoc --pdf-engine=wkhtmltopdf ${INPUTS} -o /github/workspace/${INPUT_PDF_FILE}
+pandoc --pdf-engine=wkhtmltopdf ${INPUTS} --pdf-engine-opt=--load-error-handling --pdf-engine-opt=ignore -o /github/workspace/${INPUT_PDF_FILE}
