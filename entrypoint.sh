@@ -14,4 +14,4 @@ fi
 
 echo "INPUTS:" $INPUTS
 
-pandoc ${INPUTS} -o /github/workspace/${INPUT_PDF_FILE}
+pandoc ${INPUTS} --pdf-engine=weasyprint -o /github/workspace/${INPUT_PDF_FILE}
