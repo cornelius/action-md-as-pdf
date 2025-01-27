@@ -77,7 +77,8 @@ Run action locally in dir mode:
     export INPUT_MARKDOWN_DIR=test_data
     export INPUT_MARKDOWN_FILE=""
     export INPUT_PDF_FILE=output.pdf
-    docker run --rm -e "INPUT_MARKDOWN_DIR" -e "INPUT_PDF_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
+    export INPUT_CSS_FILE=my.css
+    docker run --rm -e "INPUT_MARKDOWN_DIR" -e "INPUT_PDF_FILE" -e "INPUT_CSS_FILE" --volume "$(pwd):/github/workspace" action-md-as-pdf
 
 ## License
 

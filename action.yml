@@ -10,6 +10,9 @@ inputs:
   pdf_file:
     description: 'Name of output file in PDF format'
     required: true
+  css_file:
+    description: 'Name of CSS file used to render the PDF'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
